@@ -15,14 +15,19 @@ bot.command("startID", (ctx) => {
 
 bot.command("rank", (ctx) => {
   const number = Math.floor(Math.random() * (100 - 0));
-
   const name =
     ctx.message.from.username === undefined
       ? ctx.message.from.first_name
       : ctx.message.from.username;
   console.log(name);
-  ctx.reply(number > 70 ?`@${name} você é ${number}% corno, talvez o Johnny saiba algo sobre isso` : `@${name} você é ${number}% corno`);
+  ctx.reply(
+    number > 70
+      ? `@${name} você é ${number}% corno, talvez o Johnny saiba algo sobre isso`
+      : `@${name} você é ${number}% corno`
+  );
 });
+
+
 
 function inicializarBot() {
   bot.launch();

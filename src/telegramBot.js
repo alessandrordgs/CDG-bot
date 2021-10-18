@@ -21,7 +21,7 @@ bot.command("rank", (ctx) => {
       ? ctx.message.from.first_name
       : ctx.message.from.username;
   console.log(name);
-  ctx.reply(`@${name} você é ${number}% corno`);
+  ctx.reply(number > 70 ?`@${name} você é ${number}% corno, talvez o Johnny saiba algo sobre isso` : `@${name} você é ${number}% corno`);
 });
 
 function inicializarBot() {

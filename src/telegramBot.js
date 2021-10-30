@@ -31,7 +31,7 @@ const users = [
 
 console.log(users.length)
 bot.command("rank", (ctx) => {
-  const number = Math.floor(Math.random() * (100 - 0));
+  const number = Math.floor(Math.random() * (101 - 0));
   const randomUser = Math.floor(Math.random() * users.length)
   const user = users[randomUser]
 console.log(user.user)

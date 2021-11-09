@@ -29,7 +29,7 @@ const users = [
   { user: "UmDesocupado" },
 ];
 
-bot.command("rankok", (ctx) => {
+bot.command("rank", (ctx) => {
   const number = Math.floor(Math.random() * (101 - 0));
   const randomUser = Math.floor(Math.random() * users.length)
   const user = users[randomUser]

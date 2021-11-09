@@ -29,25 +29,21 @@ const users = [
   { user: "UmDesocupado" },
 ];
 
-console.log(users.length)
-bot.command("rank", (ctx) => {
+bot.command("rankok", (ctx) => {
   const number = Math.floor(Math.random() * (101 - 0));
   const randomUser = Math.floor(Math.random() * users.length)
   const user = users[randomUser]
-console.log(user.user)
+
   const name =
     ctx.message.from.username === undefined
       ? ctx.message.from.first_name
       : ctx.message.from.username;
-  console.log(name);
   ctx.reply(
-    number > 70
-      ? `@${name} você é ${number}% corno, talvez o @${user.user} saiba algo sobre isso`
+    number >= 70
+      ? `@${name} você é ${number}% corno, talvez o @${name ===  user.user ? users[Math.floor(Math.random() * users.length)].user : user.user } saiba algo sobre isso`
       : `@${name} você é ${number}% corno`
   );
 });
-
-
 
 function inicializarBot() {
   bot.launch();

@@ -29,6 +29,11 @@ const users = [
   { user: "UmDesocupado" },
 ];
 
+const dates = [
+  {date: "vai levar o para o cinema"},
+]
+
+
 bot.command("rank", (ctx) => {
   const number = Math.floor(Math.random() * (101 - 0));
   const randomUser = Math.floor(Math.random() * users.length)
@@ -44,6 +49,16 @@ bot.command("rank", (ctx) => {
       : `@${name} você é ${number}% corno`
   );
 });
+
+bot.command("cinema", (ctx)=>{
+  const randomUser = Math.floor(Math.random() * users.length)
+  const user = users[randomUser]
+  const name =
+    ctx.message.from.username === undefined
+      ? ctx.message.from.first_name
+      : ctx.message.from.username;
+      ctx.reply(`@${name} vai levar o @${name ===  user.user ? users[Math.floor(Math.random() * users.length)].user : user.user } para o cinema 🌹 `)
+})
 
 function inicializarBot() {
   bot.launch();

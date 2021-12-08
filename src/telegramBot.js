@@ -51,7 +51,7 @@ bot.command("cinema", (ctx) => {
     ctx.message.from.username === undefined
       ? ctx.message.from.first_name
       : ctx.message.from.username;
-      console.log('deu certo')
+      console.log('deu certo no local')
   ctx.reply(
     `@${name} vai levar o @${
       name === user.user

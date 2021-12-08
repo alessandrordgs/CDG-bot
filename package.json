@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "json-server --watch src/db.json --port 8080"
+    "start": "json-server --watch src/db.json"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

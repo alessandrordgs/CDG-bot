@@ -8,5 +8,5 @@ require('dotenv').config()
 server.use(middlewares)
 server.use(router)
 server.listen(process.env.PORT, () => {
-  console.log('Server is running')
+  console.log(`Server is running ${process.env.PORT}`)
 })
